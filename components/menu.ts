@@ -1,3 +1,5 @@
+import { Home } from "lucide-react";
+
 // This is sample data.
 export const data = {
     versions: ["1.0.0"],
@@ -5,10 +7,12 @@ export const data = {
       {
         title: "Basic",
         url: "#",
+        
         items: [
           {
             title: "Dashboard",
             url: "/",
+            icon: Home,
           },
           
         ],
