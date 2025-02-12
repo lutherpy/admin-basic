@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Asset {
+  id       String  @id @default(uuid()) // ID único
+  nome     String  // Nome do ativo
+  price    Float   // Preço do ativo
+  autor    String  // Nome do autor
+  autorId  String  // ID do autor
+  createdAt DateTime @default(now()) // Data de criação
+}
